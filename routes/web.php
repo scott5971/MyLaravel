@@ -19,3 +19,4 @@ Route::get('student/{student_no}', 'StudentController@getStudentData')->name('st
 
 Route::get('student/{student_no}/score/{subject?}', 'StudentController@getStudentScore')->where(['subject' => '(chinese|english|math)'])->name('student.score');
 
+Route::get('cool', 'Cool\TestController@index');
