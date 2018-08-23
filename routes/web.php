@@ -15,7 +15,7 @@ Route::pattern('student_no', 's[0-9]{10}');
 
 Route::get('/', 'HomeController@index');
 
-Route::get('student/{student_no}', 'StudentController@getStudentData');
+Route::get('student/{student_no}', 'StudentController@getStudentData')->name('student');
 
-Route::get('student/{student_no}/score/{subject?}', 'StudentController@getStudentScore')->where(['subject' => '(chinese|english|math)']);
+Route::get('student/{student_no}/score/{subject?}', 'StudentController@getStudentScore')->where(['subject' => '(chinese|english|math)'])->name('student.score');
 
