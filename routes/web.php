@@ -13,9 +13,7 @@
 
 Route::pattern('student_no', 's[0-9]{10}');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index');
 
 Route::get('student/{student_no}', function($student_no) {
 	return "學號 : $student_no";
