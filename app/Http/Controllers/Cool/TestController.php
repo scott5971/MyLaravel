@@ -10,4 +10,8 @@ class TestController extends Controller
     public function index() {
 		return "Cooler";
 	}
+	
+	public function getBladeView() {
+		return view('bladeview');
+	}
 }
